@@ -8,6 +8,7 @@ public class IndexController {
 
     @RequestMapping({"", "/", "index", "index.html"})
     public String index() {
+        // Return the name of template to be accessed
         return "index";
     }
 
