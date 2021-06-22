@@ -1,10 +1,12 @@
 package pro.baladeur.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import pro.baladeur.petclinic.model.Vet;
 import pro.baladeur.petclinic.services.VetService;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override

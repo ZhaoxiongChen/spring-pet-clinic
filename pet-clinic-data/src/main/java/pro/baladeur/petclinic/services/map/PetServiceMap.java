@@ -1,10 +1,12 @@
 package pro.baladeur.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import pro.baladeur.petclinic.model.Pet;
 import pro.baladeur.petclinic.services.PetService;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override

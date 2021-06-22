@@ -6,8 +6,6 @@ import pro.baladeur.petclinic.model.Owner;
 import pro.baladeur.petclinic.model.Vet;
 import pro.baladeur.petclinic.services.OwnerService;
 import pro.baladeur.petclinic.services.VetService;
-import pro.baladeur.petclinic.services.map.OwnerServiceMap;
-import pro.baladeur.petclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
